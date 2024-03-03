@@ -1,0 +1,19 @@
+#loginBtn{
+    width: 4rem;
+    margin-left: 80px;
+}
+
+#signupBtn{
+    width: 8rem;
+}
+
+.user-profile-Info {
+    background-color: #f6f6ef;
+    padding: 10px 20px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .user-profile-Info > * {
+    margin: 10px 0;
+  }
+  

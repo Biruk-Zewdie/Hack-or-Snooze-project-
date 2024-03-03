@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack or snooze</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS files/nav.css">
+    <link rel="stylesheet" href="CSS files/stories.css">
+    <link rel="stylesheet" href="CSS files/user.css">
+    <link rel="stylesheet" href="CSS files/site.css">
+</head>
+
+<body>
+    <!-- navigation bar to navigate around the page -->
+    <nav>
+        <div class="brand-nav">
+            <a class="nav-link" href="#" id="brand">Hack/snooze</a>
+        </div>
+        <div class="left-side-nav hidden">
+            <a class="nav-link" href="#" id="submit-story">Submit</a>
+            |
+            <a class="nav-link" href="#" id="user-favorite">Favorites</a>
+            |
+            <a class="nav-link" href="#" id="my-own-Story">My Story</a>
+        </div>
+        <div class="right-side-nav">
+            <a class="nav-link" href="#" id="user-profile-nav"></a>
+            <a class="hidden" href="#" id="logout-nav">Logout</a>
+            <a class="nav-link" href="#" id="user-crediential">Signup/Login</a>
+        </div>
+    </nav>
+
+    <!-- signup and signin forms -->
+    <!-- When the user submits this form, the browser will send 
+        the form data (username and password)
+        to the server using the HTTP POST method.  -->
+    <div class="user-crediential-input-field">
+        <form action="#" method="post" class="hidden" id="user-signup-form">
+            <h2>User Signup</h2>
+            <div class="name">
+                <label for="signup-name">name</label>
+                <input type="text" id="signup-name">
+            </div>
+            <div class="username">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username">
+            </div>
+            <div class="password">
+                <label for="signup-password">Password</label>
+                <input type="text" id="signup-password">
+            </div>
+            <button id="signupBtn">Register</button>
+            <hr>
+        </form>
+
+        <form action="#" method="post" class="hidden" id="user-login-form">
+            <h2>User Login</h2>
+            <div class="username">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="text" id="password">
+            </div>
+            <button id="loginBtn">Login</button>
+        </form>
+    </div>
+
+    <!-- story input form and story display container  -->
+    <section class="stories-container">
+        <form action="" class="hidden" id="submit-form">
+            <div class="story-input-form">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="story title">
+            </div>
+            <div class="story-Author">
+                <label for="author">Author</label>
+                <input type="text" id="author" placeholder="author name">
+            </div>
+            <div class="source-url">
+                <label for="url">URL</label>
+                <input type="url" id="url" placeholder="story url">
+            </div>
+            <button type="submit" id="story-submit-btn">Submit</button>
+            <hr>
+        </form>
+
+        <!-- stories display container  -->
+        <!-- list of stories -->
+        <div class="stories-list-container">
+
+            <div id="stories-loading-msg">loading...</div>
+
+            <ol class="display-all-stories stories-list" id="display-stories"></ol>
+
+            <!-- list of favorite stories by the user  -->
+
+            <ol class="display-favorite-stories stories-list hidden" id="favorite-stories-list"></ol>
+
+            <!-- list of stories posted by the user  -->
+
+            <ol class="display-own-story stories-list hidden" id="display-my-stories"></ol>
+        </div>
+
+    </section>
+
+    <!-- user profile -->
+    <div class="user-profile-Info hidden">
+        <h2>User profile Info</h2>
+        <div><b>Name:</b> <span id="profile-name">Name</span></div>
+        <div><b>Username:</b> <span id="profile-username">Username</span></div>
+        <div><b>Created At: </b><span id="profile-created-date">Created At</span></div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <!-- API data part of JS -->
+    <script src="Js files/dataPart.js"></script>
+
+    <!-- user interface part of JS -->
+    <script src="Js files/user.js"></script>
+    <script src="Js files/stories.js"></script>
+    <script src="Js files/navBar.js"></script>
+    <script src="Js files/mainPage.js"></script>
+</body>
+
+</html>
